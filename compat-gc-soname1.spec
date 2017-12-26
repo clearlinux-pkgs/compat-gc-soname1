@@ -4,7 +4,7 @@
 #
 Name     : compat-gc-soname1
 Version  : 7.6.0
-Release  : 11
+Release  : 12
 URL      : https://github.com/ivmai/bdwgc/archive/gc7_6_0.tar.gz
 Source0  : https://github.com/ivmai/bdwgc/archive/gc7_6_0.tar.gz
 Summary  : A garbage collector for C and C++
@@ -57,7 +57,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1514300369
+export SOURCE_DATE_EPOCH=1514300450
 %autogen --disable-static --enable-cplusplus
 make  %{?_smp_mflags}
 
@@ -69,7 +69,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1514300369
+export SOURCE_DATE_EPOCH=1514300450
 rm -rf %{buildroot}
 %make_install
 
@@ -78,73 +78,74 @@ rm -rf %{buildroot}
 
 %files data
 %defattr(-,root,root,-)
-/usr/share/gc/AUTHORS
-/usr/share/gc/README.DGUX386
-/usr/share/gc/README.Mac
-/usr/share/gc/README.OS2
-/usr/share/gc/README.amiga
-/usr/share/gc/README.arm.cross
-/usr/share/gc/README.autoconf
-/usr/share/gc/README.cmake
-/usr/share/gc/README.cords
-/usr/share/gc/README.darwin
-/usr/share/gc/README.environment
-/usr/share/gc/README.ews4800
-/usr/share/gc/README.hp
-/usr/share/gc/README.linux
-/usr/share/gc/README.macros
-/usr/share/gc/README.md
-/usr/share/gc/README.rs6000
-/usr/share/gc/README.sgi
-/usr/share/gc/README.solaris2
-/usr/share/gc/README.symbian
-/usr/share/gc/README.uts
-/usr/share/gc/README.win32
-/usr/share/gc/README.win64
-/usr/share/gc/debugging.html
-/usr/share/gc/finalization.html
-/usr/share/gc/gc.man
-/usr/share/gc/gcdescr.html
-/usr/share/gc/gcinterface.html
-/usr/share/gc/leak.html
-/usr/share/gc/overview.html
-/usr/share/gc/porting.html
-/usr/share/gc/scale.html
-/usr/share/gc/simple_example.html
-/usr/share/gc/tree.html
+%exclude /usr/share/gc/AUTHORS
+%exclude /usr/share/gc/README.DGUX386
+%exclude /usr/share/gc/README.Mac
+%exclude /usr/share/gc/README.OS2
+%exclude /usr/share/gc/README.amiga
+%exclude /usr/share/gc/README.arm.cross
+%exclude /usr/share/gc/README.autoconf
+%exclude /usr/share/gc/README.cmake
+%exclude /usr/share/gc/README.cords
+%exclude /usr/share/gc/README.darwin
+%exclude /usr/share/gc/README.environment
+%exclude /usr/share/gc/README.ews4800
+%exclude /usr/share/gc/README.hp
+%exclude /usr/share/gc/README.linux
+%exclude /usr/share/gc/README.macros
+%exclude /usr/share/gc/README.md
+%exclude /usr/share/gc/README.rs6000
+%exclude /usr/share/gc/README.sgi
+%exclude /usr/share/gc/README.solaris2
+%exclude /usr/share/gc/README.symbian
+%exclude /usr/share/gc/README.uts
+%exclude /usr/share/gc/README.win32
+%exclude /usr/share/gc/README.win64
+%exclude /usr/share/gc/debugging.html
+%exclude /usr/share/gc/finalization.html
+%exclude /usr/share/gc/gc.man
+%exclude /usr/share/gc/gcdescr.html
+%exclude /usr/share/gc/gcinterface.html
+%exclude /usr/share/gc/leak.html
+%exclude /usr/share/gc/overview.html
+%exclude /usr/share/gc/porting.html
+%exclude /usr/share/gc/scale.html
+%exclude /usr/share/gc/simple_example.html
+%exclude /usr/share/gc/tree.html
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/*.h
-/usr/include/gc/cord.h
-/usr/include/gc/cord_pos.h
-/usr/include/gc/ec.h
-/usr/include/gc/gc.h
-/usr/include/gc/gc_allocator.h
-/usr/include/gc/gc_backptr.h
-/usr/include/gc/gc_config_macros.h
-/usr/include/gc/gc_cpp.h
-/usr/include/gc/gc_disclaim.h
-/usr/include/gc/gc_gcj.h
-/usr/include/gc/gc_inline.h
-/usr/include/gc/gc_mark.h
-/usr/include/gc/gc_pthread_redirects.h
-/usr/include/gc/gc_tiny_fl.h
-/usr/include/gc/gc_typed.h
-/usr/include/gc/gc_version.h
-/usr/include/gc/javaxfc.h
-/usr/include/gc/leak_detector.h
-/usr/include/gc/weakpointer.h
-/usr/lib64/libcord.so
-/usr/lib64/libgc.so
-/usr/lib64/libgccpp.so
-/usr/lib64/pkgconfig/bdw-gc.pc
+%exclude /usr/include/gc.h
+%exclude /usr/include/gc/cord.h
+%exclude /usr/include/gc/cord_pos.h
+%exclude /usr/include/gc/ec.h
+%exclude /usr/include/gc/gc.h
+%exclude /usr/include/gc/gc_allocator.h
+%exclude /usr/include/gc/gc_backptr.h
+%exclude /usr/include/gc/gc_config_macros.h
+%exclude /usr/include/gc/gc_cpp.h
+%exclude /usr/include/gc/gc_disclaim.h
+%exclude /usr/include/gc/gc_gcj.h
+%exclude /usr/include/gc/gc_inline.h
+%exclude /usr/include/gc/gc_mark.h
+%exclude /usr/include/gc/gc_pthread_redirects.h
+%exclude /usr/include/gc/gc_tiny_fl.h
+%exclude /usr/include/gc/gc_typed.h
+%exclude /usr/include/gc/gc_version.h
+%exclude /usr/include/gc/javaxfc.h
+%exclude /usr/include/gc/leak_detector.h
+%exclude /usr/include/gc/weakpointer.h
+%exclude /usr/include/gc_cpp.h
+%exclude /usr/lib64/libcord.so
+%exclude /usr/lib64/libgc.so
+%exclude /usr/lib64/libgccpp.so
+%exclude /usr/lib64/pkgconfig/bdw-gc.pc
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/libcord.so.1
-/usr/lib64/libcord.so.1.0.3
+%exclude /usr/lib64/libcord.so.1
+%exclude /usr/lib64/libcord.so.1.0.3
+%exclude /usr/lib64/libgccpp.so.1
+%exclude /usr/lib64/libgccpp.so.1.0.3
 /usr/lib64/libgc.so.1
 /usr/lib64/libgc.so.1.0.3
-/usr/lib64/libgccpp.so.1
-/usr/lib64/libgccpp.so.1.0.3
