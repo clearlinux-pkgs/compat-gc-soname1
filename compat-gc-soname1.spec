@@ -4,7 +4,7 @@
 #
 Name     : compat-gc-soname1
 Version  : 7.6.0
-Release  : 12
+Release  : 13
 URL      : https://github.com/ivmai/bdwgc/archive/gc7_6_0.tar.gz
 Source0  : https://github.com/ivmai/bdwgc/archive/gc7_6_0.tar.gz
 Summary  : A garbage collector for C and C++
